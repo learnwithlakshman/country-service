@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: country-service
+server:
+  port: ${PORT:8081}
+  servlet:
+    context-path: /cservice
+
+eureka:
+  instance:
+    hostname: https://lwl-ds-service.herokuapp.com/
+    homePageUrl: https://${eureka.instance.hostName}/
+    home-page-url-path: https://${eureka.instance.hostName}
+  client:
+    serviceUrl:
+      defaultZone: https://lwl-ds-service.herokuapp.com/eureka/
+      non-secure-port: 80
+      secure-port: 443
+
