@@ -7,13 +7,7 @@ server:
     context-path: /cservice
 
 eureka:
-  instance:
-    hostname: https://lwl-ds-service.herokuapp.com/
-    homePageUrl: https://${eureka.instance.hostName}/
-    home-page-url-path: https://${eureka.instance.hostName}
   client:
     serviceUrl:
-      defaultZone: https://lwl-ds-service.herokuapp.com/eureka/
-      non-secure-port: 80
-      secure-port: 443
+      defaultZone: https://172.18.133.42/eureka/
 
